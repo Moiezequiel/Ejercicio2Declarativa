@@ -74,3 +74,8 @@ festividad(durania, feria_del_grano).
 espiritu(rivoria, agua).
 espiritu(montelar, montana).
 espiritu(durania, tierra).
+
+%descendientes
+hijo(X,Y):-padre(Y,X);madre(Y,X).
+descendiente(Y,X):-hijo(Y,X).
+descendiente(Z,X):-hijo(Z,Y),hijo(Y,X).
