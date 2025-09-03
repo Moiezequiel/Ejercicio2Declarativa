@@ -15,3 +15,22 @@ calculo_aeria_perim :-
         % rectangulo(X,Y)
         
         ).
+
+
+%OperadoresRelacionales
+%Numeromayor
+mayor(X,Y,R).
+mayor(X,Y,X) :- X > Y.
+mayor(X,Y,Y) :- X =< Y.
+
+%Rangodeedad
+rango_edad(Edad,Rango) :-
+    (Edad < 0 -> Rango = 'bebe';
+    Edad =< 12 -> Rango = 'niño';
+    Edad =< 17 -> Rango = 'adolescente';
+    Rango = 'ya te toca chambear').
+
+%Notadeaprobacion
+nota_aprobacion(Nota,Estado) :-
+    (Nota =< 5 -> Estado = 'reprobado';
+    Nota =< 6 -> Estado = 'aprobado').
