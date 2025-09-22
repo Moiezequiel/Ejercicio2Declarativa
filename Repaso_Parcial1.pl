@@ -91,6 +91,9 @@ sobrino(Sob, Tio) :- hijo(Sob, X), hermano(X,Tio); hijo(Sob, X), primo(X,Tio).
 %recip mejor amigo
 amigo(X,Y) :- amigo(Y,X).
 
+%abuelo 
+abuelo(Ab, Ni) :- hijo(Ni,Pa), hijo(Pa,Ab).
+
 
 
 
