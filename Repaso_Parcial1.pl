@@ -70,14 +70,14 @@ padre(felipe,joaquin).
 hijo(Hijo,Padre) :- padre(Padre,Hijo).
 
 %regla recip esposo 
-casado_con(Esposa,Esposo) :- casado_con(Esposo_esposa).
+casado_con(Esposa,Esposo) :- casado_con(Esposo,Esposa).
 
 %regla define madre
 madre(Madre,Hijo) :- casado_con(Madre,Padre),padre(Padre,Hijo).
 
 %regla para definir hermanos recip
 hermano(X,Y) :- padre(Z,Y), padre(Z,X), madre(A,X),  madre(A,Y).
-hermano(Y,X) :- hermano(Y,X).
+hermano(Y,X) :- hermano(X,Y).
 
 %regla vive en para hijos
 vive_en(Per,Lug) :- padre(X,Per),vive_en(X,Lug) ; madre(Y,Per),vive_en(Y,Lug).
@@ -94,10 +94,8 @@ amigo(X,Y) :- amigo(Y,X).
 %abuelo 
 abuelo(Ab, Ni) :- hijo(Ni,Pa), hijo(Pa,Ab).
 
-
-
-
-
-%fin de arbol 1
+%hijo (X,ernesto).
+%abuelo(X,mateo).
+%
 
 
