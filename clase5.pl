@@ -34,3 +34,4 @@ rango_edad(Edad,Rango) :-
 nota_aprobacion(Nota,Estado) :-
     (Nota =< 5 -> Estado = 'reprobado';
     Nota =< 6 -> Estado = 'aprobado').
+
