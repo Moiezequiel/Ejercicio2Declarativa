@@ -4,13 +4,13 @@
 (define (contar-pares lst)
   (length (filter even? lst)))
 
-(displayln (format "Cantidad de pares: ~a" (contar-pares '(1 2 3 4 5 6))))
+(printf"Cantidad de pares: ~a" (contar-pares '(1 2 3 4 5 6))))
 
 ;2.
 (define (suma-cuadrados lst)
   (apply + (map sqr lst)))
 
-(displayln (format "Suma de cuadrados: ~a" (suma-cuadrados '(1 2 3 4))))
+(printf"Suma de cuadrados: ~a" (suma-cuadrados '(1 2 3 4))))
 
 ;2/2.
 (define (suma-cuadrados2 lst)
@@ -33,25 +33,17 @@
 ;4 promedio positivos
 (define filterpos 
   (lambda (lst) 
-    (filter (lambda (x) (> x 0)) llistast))) 
+    (map (filter (lambda (x) (> x 0)) lst) foldl + 0))) 
       (printf "positiff ~a\n" (filterpos '(-1 -2 -3 4 5 6)))
-
-
-(define mayores-que3
-  (lambda (lista n)
-    (filter (lambda (x) (> x n)) lista)))
-
-(printf "changos: ~a\n" (mayores-que3 '(1 2 3 4 5 6) 2))
-
+  
 
 (define (mayores-que lista n)
 (filter (lambda (x) (> x n)) lista))
 (printf "changos: ~a\n" (mayores-que '(1 2 3 4 5 6) 2))
-
-
 
 (define (mayores-que2 lista n)
   (filter (lambda (x) (> x n)) lista))
 
 (printf "changos: ~a\n" (mayores-que2 '(1 2 3 4 5 6) 2))
 
+;5

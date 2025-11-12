@@ -1,4 +1,4 @@
-#lang racket/base
+#lang racket
 
 ; a)
 ;1a.
@@ -40,7 +40,7 @@
 (define (area base altura)
   (* base altura))
 
-(displayln (format "Área del rectángulo: ~a" (area base altura)))
+(printf"Área del rectángulo: ~a" (area base altura)))
 
 
 ; 5b. Conversión de grados Celsius a Fahrenheit
@@ -48,7 +48,7 @@
 (define (celsius->fahrenheit c)
   (+ (* (/ 9 5) c) 32))
 
-(displayln (format "25 °C equivalen a ~a °F" (celsius->fahrenheit 25)))
+(printf"25 °C equivalen a ~a °F" (celsius->fahrenheit 25)))
 
 
 ; 6b. Precio con impuesto
@@ -64,7 +64,7 @@
 (define (precio-final p)
   (+ p (iva p)))
 
-(displayln (format "Precio final con IVA: $~a" (precio-final precio-base)))
+(printf"Precio final con IVA: $~a" (precio-final precio-base)))
 
 
 ; 7b. Descuento encadenado
@@ -81,7 +81,7 @@
 (define (precio-total p)
   (iva13 (descuento10 p)))
 
-(displayln (format "Precio total después de descuento e IVA: $~a"
+(printf"Precio total después de descuento e IVA: $~a"
                    (precio-total 200)))
 
 ;c)  
@@ -120,6 +120,6 @@
     precio-final))
 
 ; Ejemplo de uso:
-(displayln (format "Precio final ( descuento antes que impuesto): $~a"
+(printf"Precio final ( descuento antes que impuesto): $~a"
                    (calcular-total 100 0.10 0.13)))
 
