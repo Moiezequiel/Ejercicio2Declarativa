@@ -1,0 +1,8 @@
+¿Qué come el pingüino?
+come(pinguino, Que).
+
+¿Qué animales son comida del águila?
+comida(X).
+
+¿Es el loro un ave?
+ave(loro).  
